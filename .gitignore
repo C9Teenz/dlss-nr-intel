@@ -1,0 +1,56 @@
+# ---------------------------------------------------------------------------------------------
+# NVIDIA data: never commit or distribute.
+# Weights extracted from your own nvngx_dlssnr.dll, ONNX files and weight blobs that embed them,
+# the MLX-DLSS clone, golden outputs, reference frames, analysis dumps: all live in work/.
+# ---------------------------------------------------------------------------------------------
+work/
+nvngx*.dll
+*.safetensors
+*.onnx
+*.onnx.data
+hnet-ends_*.bin
+models/neural/
+
+# Frame captures written by the bridge (ini capture=N) and logs
+dlss_nr_capture/
+*.log
+
+# Build output and the packaged game drop-in (rebuilt by tools/package_neural_dropin.ps1)
+build/
+dist/
+*.pdb
+*.ilk
+*.obj
+
+# Third-party packages and reference repositories: fetched locally, see README "Setup"
+# (ONNX Runtime DirectML, DirectML, DXC NuGet packages; OptiScaler; reference repos)
+third_party/
+
+# Local working notes, agent instructions and retired material
+PROGRESS-neural.md
+plan-neural-rendering-dx12.md
+DLSS-NR-Native-DX12-PoC.md
+AGENTS.md
+CLAUDE.md
+.claude/
+archive/
+
+# Generated reports and test images from the early milestones
+docs/*.bmp
+docs/*.ppm
+docs/bridge-report.md
+docs/capability-report.*
+docs/benchmark-results.json
+neural-report.md
+
+# Python / editors / OS
+__pycache__/
+*.pyc
+.venv/
+venv/
+.vscode/
+.vs/
+*.swp
+Thumbs.db
+Desktop.ini
+.DS_Store
